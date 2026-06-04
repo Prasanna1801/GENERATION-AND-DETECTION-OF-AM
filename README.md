@@ -85,37 +85,38 @@ Amplitude Modulation is the process of changing the amplitude of a relatively hi
 •	Verify the generated waveform using Tabulation and Model Waveform
 # PROGRAM:
 ```
-Am=10.7;
-fm=1792;
-fs=179200;
+Am=11.6;
+fm=1879;
+Ac=18.56;
+fc=18790;
+fs=187900;
 t=0:1/fs:2/fm;
-Ac=16.05;
-fc=17920;
-em=Am*cos(2*3.14*fm*t);
+Em=Am*cos(2*3.14*fm*t);
 subplot(3,1,1);
-plot(t,em);
-ec=Ac*cos(2*3.14*fc*t);
+plot(t,Em);
+Ec=Ac*cos(2*3.14*fc*t);
 subplot(3,1,2);
-plot(t,ec);
-eam=(Ac+em).*cos(2*3.14*fc*t); 
+plot(t,Ec);
+Eam=(Ac+Em).*cos(2*3.14*fc*t);
 subplot(3,1,3);
-plot(t,eam);
+plot(t,Eam);
+
 ```
 # MODEL GRAPH:
 <img width="919" height="1290" alt="image" src="https://github.com/user-attachments/assets/03d6ca7c-9fa1-4a92-81c6-2718308bad80" />
 
 # OUTPUT WAVEFORM:
-<img width="1609" height="974" alt="Amplitude modulation" src="https://github.com/user-attachments/assets/8a240301-27ff-415f-88da-0072aa97d35d" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3e6bf9b8-bbd0-4135-b1ac-999f3743d970" />
 
 
 # TABULATION:
-<img width="1600" height="851" alt="AM table" src="https://github.com/user-attachments/assets/e9f6e96c-3510-49c8-9180-7e8312fc6797" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/0d213185-7800-47c4-b52a-1d5086b246c3" />
 		
 
 # Calculation:
-1.	ma (Theory) = am/ac = 10.7/16.05 = 0.666
-2.	ma(Practical) = (Emax-Emin)/(Emax+Emin) = 21.666/31.574 = 0.686
-3.	Bw=2fmp = 2*1794.36 = 3588.72
+1.	ma (Theory) = am/ac = 11.6 / 18.56 = 0.625
+2.	ma(Practical) = (Emax-Emin)/(Emax+Emin) = 24.71 / 35.65 = 0.6931
+3.	Bw=2fmp = 2 * 1883.94 = 3767.88
 
 
 # RESULT:
